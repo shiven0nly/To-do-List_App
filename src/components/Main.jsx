@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ButtonAdd from "./ButtonAdd";
 import ButtonEdit from "./ButtonEdit";
 import ButtonDelete from "./ButtonDelete";
@@ -8,6 +8,19 @@ const Main = () => {
   const [todos, setTodos] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [currentEditIndex, setCurrentEditIndex] = useState(null);
+
+
+  useEffect(() => {
+    const storedTodos = localStorage.getItem("todos");
+    if (storedTodos) {
+      setTodos(JSON.parse(storedTodos));
+    }
+  }, []);
+
+  // Save to localStorage when todos change
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleAdd = () => {
     if (todo.trim() === "") return;
@@ -43,7 +56,7 @@ const Main = () => {
     setTodo(e.target.value);
   };
 
-  const handleToggleComplete = (index) => {
+  const toggleCompleted = (index) => {
     const updated = todos.map((item, i) =>
       i === index ? { ...item, isCompleted: !item.isCompleted } : item
     );
@@ -78,15 +91,14 @@ const Main = () => {
             key={index}
             className="todo flex justify-between items-center bg-white shadow-amber-50 px-4 py-2 rounded shadow-lg w-full"
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <input
                 type="checkbox"
                 checked={item.isCompleted}
-                onChange={() => handleToggleComplete(index)}
-                className="w-4 h-4 cursor-pointer accent-blue-600"
+                onChange={() => toggleCompleted(index)}
               />
               <span
-                className={`text-md ${
+                className={`${
                   item.isCompleted ? "line-through text-gray-400" : ""
                 }`}
               >
