@@ -6,7 +6,8 @@ A clean, minimal and interactive Todo List application built using **React** and
 
 ## 📸 Preview
 
-<img width="1346" height="911" alt="image" src="https://github.com/user-attachments/assets/27a4ea63-b72e-4a9c-89f6-2ffd0debd688" />
+<img width="1278" height="909" alt="image" src="https://github.com/user-attachments/assets/6217de42-1c0f-4894-8968-dd8c22932e5d" />
+
 
 
 ---
