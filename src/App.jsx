@@ -4,7 +4,7 @@ import './App.css'
 import SplitText from "./components/SpiltText";
 import Hero from './components/Hero'
 import Main from './components/Main'
-
+import Footer from './components/Footer'
 
 const App = () => {
   const handleAnimationComplete = () => {
@@ -33,8 +33,11 @@ const App = () => {
 />
 </div>
 </div>
+<div className='flex flex-col gap-[6rem]'>
     <Hero />
     <Main />
+<Footer />
+</div>
    </div>
    </>
   )
