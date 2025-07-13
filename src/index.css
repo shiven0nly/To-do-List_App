@@ -15,14 +15,19 @@ body{
     animation-fill-mode: forwards;
 }
 
-@keyframes fadeup {
+.main{
+    animation: 0.6s forwards fadein ease-in;
+}
+
+@keyframes fadeup{
+
     from{
-        transform: translateY(-100px);
+        transform: translateY(-90px);
         opacity: 0;
     }
 
     to{
-        transform: translateY(0);
+        transform: translateY(0px);
         opacity: 1;
     }
 }
@@ -31,12 +36,12 @@ body{
 
 @keyframes fadein {
     from{
-        transform: translateY(50px);
+        width: 0;
         opacity: 0;
     }
 
     to{
-        transform: translateY(0px);
+        width: fit-content;
         opacity: 1;
     }
 }

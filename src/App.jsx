@@ -33,7 +33,7 @@ const App = () => {
 />
 </div>
 </div>
-<div className='flex flex-col gap-[6rem]'>
+<div className='flex flex-col gap-[3.5rem]'>
     <Hero />
     <Main />
 <Footer />
