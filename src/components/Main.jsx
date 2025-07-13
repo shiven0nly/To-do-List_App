@@ -65,7 +65,9 @@ const Main = () => {
 
   return (
     <div className="main">
-    <div className="bg-blue-200 flex flex-col items-start absolute top-[35%] left-[30%] min-w-[40vw] min-h-[55vh] p-5 rounded-lg shadow-lg shadow-indigo-300">
+    <div
+  className="bg-blue-200 flex flex-col items-start absolute top-[35%] left-[30%] min-w-[40vw] h-[60vh] p-5 rounded-lg shadow-lg shadow-indigo-300 overflow-y-auto crollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300">
+
       <div className="addTodo my-5">
         <h2 className="text-lg font-bold mb-2">Add a Todo:</h2>
         <div className="flex items-center gap-5">
