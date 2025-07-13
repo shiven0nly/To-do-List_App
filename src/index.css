@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+body{
+    background: linear-gradient(to right, #1b4242, #4fbdba, #cdeed6);
+}
+
+.text{
+    color: yellow;
+    text-shadow: 0 5px rgba(178, 127, 0)
+}
+
+.bg-hero{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    animation: 0.4s fadeup ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeup {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes fadein {
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
